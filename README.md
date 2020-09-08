@@ -21,17 +21,6 @@ Create a certification authority and sign certificates for sub-domains from it.
 ## Docker-compose example
 
 ```yaml
-proxy:
-  image: flavienperier/proxy
-  container_name: proxy
-  restart: always
-  volumes:
-    - ./cache:/var/squid/cache
-  ports:
-    - 3128:3128
-  environment:
-    DNS: 1.1.1.1
-
   openssl:
     image: flavienperier/openssl
     container_name: openssl
