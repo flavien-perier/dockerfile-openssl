@@ -1,3 +1,7 @@
+![license](https://badgen.net/github/license/flavien-perier/dockerfile-openssl)
+[![docker pulls](https://badgen.net/docker/pulls/flavienperier/openssl)](https://hub.docker.com/r/flavienperier/openssl)
+[![ci status](https://badgen.net/github/checks/flavien-perier/dockerfile-openssl)](https://github.com/flavien-perier/dockerfile-openssl)
+
 # Dockerfile OpenSSL
 
 Dockerfile for [OpenSSL](https://www.openssl.org/).
