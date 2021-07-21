@@ -20,7 +20,7 @@ Create a certification authority and sign certificates for sub-domains from it.
 
 ## Volumes
 
-- /root/certificates
+- /certificates
 
 ## Docker-compose example
 
@@ -29,7 +29,7 @@ Create a certification authority and sign certificates for sub-domains from it.
     image: flavienperier/openssl
     container_name: openssl
     volumes:
-      - ./certificates:/root/certificates
+      - ./certificates:/certificates
     environment:
       CERTIFICATES: www mail wp admin
 ```
