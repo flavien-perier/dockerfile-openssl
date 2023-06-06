@@ -10,7 +10,10 @@ ENV C="FR" \
     O="Flavien" \
     OU="local" \
     DOMAIN="local" \
-    CERTIFICATES="test"
+    CERTIFICATES="test" \
+    UID="1000" \
+    GID="1000" \
+    CHMOD="400"
 
 WORKDIR /root
 VOLUME /root/certificates

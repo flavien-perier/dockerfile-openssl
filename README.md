@@ -17,6 +17,9 @@ Create a certification authority and sign certificates for sub-domains from it.
 - OU: SSL certificates configuration.
 - DOMAIN: SSL certificates configuration.
 - CERTIFICATES: List of sub-domains for which to generate certificates.
+- UID: Certificate UID
+- GID: Certificate GID
+- CHMOD: Chamod certificates
 
 ## Volumes
 
