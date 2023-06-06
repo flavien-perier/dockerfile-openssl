@@ -16,7 +16,7 @@ do
     
     openssl genrsa -out /certificates/$key/$key.key 4096
     openssl req -sha256 -new -key /certificates/$key/$key.key -out /certificates/$key/$key.csr -subj "/C=$C/ST=$ST/L=$L/O=$O/OU=$OU/CN=$key.$DOMAIN"
-    openssl x509 -req -sha256 -days 7 -in /certificates/$key/$key.csr -CA /certificates/root/root.pem -CAkey /certificates/root/root.key -CAcreateserial -out /certificates/$key/$key.cert 
+    openssl x509 -req -sha256 -days 7 -in /certificates/$key/$key.csr -CA /certificates/root/root.pem -CAkey /certificates/root/root.key -CAcreateserial -out /certificates/$key/$key.pem 
 done
 
 chown -R $UID:$GID /certificates
