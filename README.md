@@ -19,7 +19,7 @@ Create a certification authority and sign certificates for sub-domains from it.
 - CERTIFICATES: List of sub-domains for which to generate certificates.
 - UID: Certificate UID
 - GID: Certificate GID
-- CHMOD: Chamod certificates
+- CHMOD: Chmod certificates
 
 ## Volumes
 
