@@ -21,4 +21,4 @@ done
 
 chown -R $UID:$GID /certificates
 chmod -R 555 /certificates
-find /certificates -type f -exec chmod $CHMOD {} \;
+find /certificates -type f -exec chmod 444 {} \;
