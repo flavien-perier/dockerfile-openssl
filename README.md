@@ -34,5 +34,6 @@ Create a certification authority and sign certificates for sub-domains from it.
     volumes:
       - ./certificates:/certificates
     environment:
+      DOMAIN: local
       CERTIFICATES: www mail wp admin
 ```

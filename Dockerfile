@@ -1,8 +1,13 @@
 FROM alpine
 
-LABEL maintainer="Flavien PERIER <perier@flavien.io>" \
-      version="1.0.0" \
-      description="OpenSSL"
+LABEL org.opencontainers.image.title="OpenSSL" \
+      org.opencontainers.image.description="OpenSSL" \
+      org.opencontainers.image.version="1.0.0" \
+      org.opencontainers.image.vendor="flavien.io" \
+      org.opencontainers.image.maintainer="Flavien PERIER <perier@flavien.io>" \
+      org.opencontainers.image.url="https://github.com/flavien-perier/dockerfile-openssl" \
+      org.opencontainers.image.source="https://github.com/flavien-perier/dockerfile-openssl" \
+      org.opencontainers.image.licenses="MIT"
 
 ENV C="FR" \
     ST="Limoges" \
@@ -15,12 +20,10 @@ ENV C="FR" \
     GID="1000" \
     CHMOD="400"
 
-WORKDIR /root
-VOLUME /root/certificates
+VOLUME /certificates
 
-COPY --chown=root:root genRsa.sh genRsa.sh
+RUN apk add --update --no-cache openssl
 
-RUN apk add --update --no-cache openssl && \
-    chmod 750 genRsa.sh
+COPY --chown=root:root --chmod=500 start.sh /root/start.sh
 
-CMD ./genRsa.sh
+CMD /root/start.sh
